@@ -1,6 +1,8 @@
 # C2 HIDL + MediaProfiles Fix (`c2hidl-mediaprofiles-fix`)
 
-An APatch / Magisk module to restore hardware-accelerated video recording (AVC/HEVC) and fix `MediaRecorder` "prepare failed" (`-2147483648`) errors on the **OnePlus Nord CE2 Lite 5G (CPH2381 / CPH2409, Qualcomm Snapdragon 695 / SM6375)** running Phh-based GSIs (such as crDroid GSI) on top of LineageOS / OEM vendor and boot partitions.
+An APatch module to restore hardware-accelerated video recording (AVC/HEVC) and fix `MediaRecorder` "prepare failed" (`-2147483648`) errors on the **OnePlus Nord CE2 Lite 5G (CPH2381 / CPH2409, Qualcomm Snapdragon 695 / SM6375)** running Phh-based GSIs (such as crDroid GSI) on top of LineageOS / OEM vendor and boot partitions.
+
+> ⚠️ **APatch only for now** — Magisk / KernelSU are not yet supported (the scripts use APatch-specific paths). Magisk support is tracked in [#1](https://github.com/naextro/c2hidl-mediaprofiles-fix/issues/1) — message @h6s on Discord if you can help test it.
 
 > General class of bug: this is a fixable **Treble GSI / Phh GSI + Qualcomm vendor** bug class, not just a OnePlus Nord CE2 Lite 5G (CPH2381 / CPH2409, Snapdragon 695 / SM6375) issue. Tested and tuned on the Nord CE2 Lite 5G (CPH2381 / CPH2409, Snapdragon 695 / SM6375) running a Phh GSI / Treble GSI, but the same failure mode affects other Qualcomm + Phh GSI / Treble GSI phones — see [Does this affect other devices?](#does-this-affect-other-devices) below.
 
@@ -87,7 +89,7 @@ c2hidl-mediaprofiles-fix/
 ## Requirements
 
 - **Device**: OnePlus Nord CE2 Lite 5G (`CPH2381` / `CPH2409`, SM6375) or similar Snapdragon 695 devices running a Phh-based GSI.
-- **Root**: [APatch](https://github.com/bmax121/APatch) (0.13.3+) or Magisk / KernelSU.
+- **Root**: [APatch](https://github.com/bmax121/APatch) (0.13.3+) only. Magisk / KernelSU are not supported yet — see [#1](https://github.com/naextro/c2hidl-mediaprofiles-fix/issues/1).
 - **APatch Mount Provider**: A meta-module providing overlay mount support (e.g., **Hybrid Mount** or **ZygiskNext / ReZygisk**) must be active for modules to mount properly.
 
 ---
@@ -98,7 +100,7 @@ c2hidl-mediaprofiles-fix/
    ```bash
    zip -r c2hidl_module.zip ./*
    ```
-2. Open the **APatch** app (or Magisk / KernelSU).
+2. Open the **APatch** app.
 3. Navigate to the **Modules** tab, tap **Install**, and select `c2hidl_module.zip`.
 4. Reboot the device.
 

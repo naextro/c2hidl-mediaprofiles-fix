@@ -2,7 +2,9 @@
 
 An APatch module to restore hardware-accelerated video recording (AVC/HEVC) and fix `MediaRecorder` "prepare failed" (`-2147483648`) errors on the **OnePlus Nord CE2 Lite 5G (CPH2381 / CPH2409, Qualcomm Snapdragon 695 / SM6375)** running Phh-based GSIs (such as crDroid GSI) on top of LineageOS / OEM vendor and boot partitions.
 
-> ⚠️ **APatch only for now** — Magisk / KernelSU are not yet supported (the scripts use APatch-specific paths). Magisk support is tracked in [#1](https://github.com/naextro/c2hidl-mediaprofiles-fix/issues/1) — message @h6s on Discord if you can help test it.
+> ⚠️ **APatch only for now** — Magisk / KernelSU are not yet supported (the scripts use APatch-specific paths). Want Magisk support? You have two options:
+> 1. Open a GitHub issue on this repo requesting it
+> 2. Message me on Discord — @h6s
 
 > General class of bug: this is a fixable **Treble GSI / Phh GSI + Qualcomm vendor** bug class, not just a OnePlus Nord CE2 Lite 5G (CPH2381 / CPH2409, Snapdragon 695 / SM6375) issue. Tested and tuned on the Nord CE2 Lite 5G (CPH2381 / CPH2409, Snapdragon 695 / SM6375) running a Phh GSI / Treble GSI, but the same failure mode affects other Qualcomm + Phh GSI / Treble GSI phones — see [Does this affect other devices?](#does-this-affect-other-devices) below.
 

@@ -1,0 +1,2 @@
+allow mediaserver shell_data_file dir { search read open getattr }
+allow mediaserver shell_data_file file { read open getattr map }

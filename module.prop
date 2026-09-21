@@ -1,0 +1,6 @@
+id=c2hidl-mediaprofiles-fix
+name=C2 HIDL + MediaProfiles Fix
+version=1.0
+versionCode=1
+author=naextro
+description=Forces vendor c2 HAL (hidl) + patched media_profiles for video recording on crDroid GSI
